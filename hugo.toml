@@ -1,4 +1,4 @@
-baseURL = 'https://wurslu.github.io/blog'
+baseURL = 'https://urlu.cool/blog'
 languageCode = 'zh-cn'
 title = 'URLU Blog'
 theme = 'PaperMod'
