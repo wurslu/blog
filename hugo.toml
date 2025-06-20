@@ -1,3 +1,12 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://wurslu.github.io/blog'
 languageCode = 'zh-cn'
-title = 'My New Hugo Site'
+title = 'URLU Blog'
+theme = 'PaperMod'
+
+[params]
+defaultTheme = 'auto'
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
