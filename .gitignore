@@ -34,3 +34,6 @@ yarn-error.log*
 # 备份文件
 *.bak
 *.backup
+
+# 创建文章的常用方法
+createNewPost.md
