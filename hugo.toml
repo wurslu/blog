@@ -1,4 +1,4 @@
-baseURL = 'https://urlu.cool/blog'
+baseURL = 'https://blog.urlu.cool/blog'
 languageCode = 'zh-cn'
 title = 'URLU Blog'
 theme = 'PaperMod'
