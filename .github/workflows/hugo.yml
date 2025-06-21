@@ -59,7 +59,13 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://blog.urlu.cool/"
+
+      - name: Add CNAME file
+        run: |
+          if [ -f "static/CNAME" ]; then
+            cp static/CNAME public/CNAME
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
