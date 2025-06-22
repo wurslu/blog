@@ -2,7 +2,8 @@
 date = '2025-06-21T09:20:47+08:00'
 draft = false
 title = '连接云服务器'
-tags = ['云服务器','']
+tags = ['云服务器','ssh']
+categories = ['云服务器']
 +++
 
 ## 前置条件
