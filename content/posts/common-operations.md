@@ -191,3 +191,70 @@ editor.putString("name", "张三")
 editor.putInt("age", 25)
 editor.apply()
 ```
+
+## observable 简化版
+
+```kotlin
+fun <T> observable(initialValue: T, onChange: (KProperty<*>, T, T) -> Unit) {
+    return object {
+        private var value = initialValue
+
+        operator fun getValue(thisRef: Any?, property: KProperty<*>): T {
+            return value  // get时直接返回
+        }
+
+        operator fun setValue(thisRef: Any?, property: KProperty<*>, newValue: T) {
+            val oldValue = value
+            value = newValue  // 先设置新值
+            onChange(property, oldValue, newValue)  // 然后调用你的回调
+        }
+    }
+}
+```
+
+## by
+
+本质是把属性的 get/set 操作委托给另一个对象
+
+```kotlin
+fun main() {
+    var userName by observable("default"){ _, oldValue, newValue ->
+        println("oldValue:$oldValue change to $newValue")
+    }
+    println(userName) // default
+    userName = "alice" // oldValue:default change to alice
+    println(userName) // alice
+}
+```
+
+## by vetoable - 可以拒绝的属性修改
+
+修改属性前先检查，不合法就拒绝
+
+```kotlin
+fun main() {
+    var score by vetoable(10) { _, _, newValue ->
+        newValue >= 0 // 返回true表示允许修改，false表示拒绝
+    }
+    println(score) // 10
+    score = -10
+    println(score) // 10
+}
+```
+
+### Android 中的应用举例
+
+```kotlin
+class UserProfile {
+    // 用户名改变时自动更新UI
+    var userName: String by observable("") { _, _, newName ->
+        binding.nameTextView.text = newName
+        saveUserName(newName) // 自动保存
+    }
+
+    // 限制输入范围
+    var volume: Int by vetoable(50) { _, _, newVolume ->
+        newVolume in 0..100 // 音量只能0-100
+    }
+}
+```
