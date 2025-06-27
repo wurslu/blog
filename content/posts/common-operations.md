@@ -108,7 +108,7 @@ fun main() {
 ## require() - 检查参数
 
 ```kotlin
-fun devide(a: Int, b: Int): Int {
+fun divide(a: Int, b: Int): Int {
     require(b != 0) { "除数不能为 0" }
     return a / b
 }
@@ -139,4 +139,55 @@ val displayName = name ?: "默认值
 ```kotlin
 val validAge = age.takeIf { it > 0 } // 大于0才返回，否则null
 val invalidAge = age.takeUnless { it > 100 } // 小于等于100才返回
+```
+
+## let - 空安全调用，转换结果
+
+```kotlin
+// 最常用：空安全调用
+val user: User? = getUser()
+user?.let {
+    println("用户名: ${it.name}")
+    println("年龄: ${it.age}")
+} // 只有user不为null才执行
+
+// 转换结果
+val result = "hello".let {
+    it.uppercase() + "!!!"
+} // result = "HELLO!!!"
+```
+
+## apply - 链式调用时有用
+
+```kotlin
+// 没有apply的写法
+val textView = TextView(this)
+textView.text = "标题"
+textView.textSize = 18f
+textView.setTextColor(Color.BLACK)
+addView(textView) // 需要保存变量
+
+// 用apply - 可以直接链式调用
+addView(TextView(this).apply {
+    text = "标题"
+    textSize = 18f
+    setTextColor(Color.BLACK)
+}) // 不需要临时变量
+```
+
+## with/run - 用处不大，装逼用的
+
+```kotlin
+// with 的所谓"优势"
+with(sharedPreferences.edit()) {
+    putString("name", "张三")
+    putInt("age", 25)
+    apply()
+}
+
+// 不用 with 直接写
+val editor = sharedPreferences.edit()
+editor.putString("name", "张三")
+editor.putInt("age", 25)
+editor.apply()
 ```
