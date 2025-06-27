@@ -126,8 +126,14 @@ spring.application.name=demo3
 spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.jpa.hibernate.ddl-auto=create-drop
-spring.jpa.show-sql=false
+spring.jpa.show-sql=true
 spring.datasource.username=name
 spring.datasource.password=password
 
 ```
+
+`spring.jpa.hibernate.ddl-auto=create-drop`意味着启动时根据实体类（@Entity）自动创建所有表结构; 关闭时自动删除所有表结构（DROP TABLE）。
+
+`spring.jpa.show-sql=true`意味着是否在控制台打印 Hibernate 执行的 SQL 语句。
+
+这两个配置在**生产模式**下绝对**不适合开启**
