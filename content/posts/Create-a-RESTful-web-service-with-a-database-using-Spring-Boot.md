@@ -100,3 +100,34 @@ spring.sql.init.mode=always
 - `jdbc:h2:file:./data/testdb` - 文件数据库，数据持久化，适合需要保存数据的场景
 
 推荐开发阶段使用内存模式，避免数据库文件冲突问题。
+
+## 替换 JDBC 为 JPA
+
+如果你和我一样不想创建 SQL 脚本，那么可以使用 JPA
+
+1. 删除 SQL 脚本文件
+2. 更新`Task.kt`文件
+
+```Kotlin
+@Entity
+@Table(name = "TASKS")
+data class Task(
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    var id: String? = null,
+    val name: String
+)
+```
+
+3. 更新配置 `application.properties`
+
+```properties
+spring.application.name=demo3
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=false
+spring.datasource.username=name
+spring.datasource.password=password
+
+```
