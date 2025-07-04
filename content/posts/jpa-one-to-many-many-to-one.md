@@ -2,8 +2,8 @@
 date = '2025-07-05T02:45:02+08:00'
 draft = false
 title = 'JPA OneToMany 和 ManyToOne 超简单入门示例'
-tags = ['Kotlin','OneToMany','ManyToOne','JPA']
-categories = ['Kotlin']
+tags = ['Kotlin','OneToMany','ManyToOne']
+categories = ['Kotlin','Web Service']
 +++
 
 ## 什么是 OneToMany 和 ManyToOne？

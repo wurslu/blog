@@ -3,7 +3,7 @@ date = '2025-07-01T22:52:48+08:00'
 draft = false
 title = 'Singleton Pattern'
 tags = ['Kotlin','单例模式']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 单例模式是一种创建型设计模式，它的核心思想是确保一个类在整个应用程序运行期间只能创建一个实例，并提供全局访问这个实例的方法。

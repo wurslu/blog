@@ -3,7 +3,7 @@ date = '2025-07-02T19:15:41+08:00'
 draft = false
 title = 'Nothing type'
 tags = ['Kotlin','Nothing type']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 [Nothing type](https://kotlinlang.org/docs/exceptions.html#the-nothing-type) can be used as a return type for a function that always throws an exception. When you call such a function, the compiler uses the information that the execution doesn't continue beyond the function.

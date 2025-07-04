@@ -3,7 +3,7 @@ date = '2025-07-02T13:46:01+08:00'
 draft = false
 title = 'Named Arguments'
 tags = ['Kotlin','named arguments','Kotlin Koans']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 Make the function `joinOptions()` return the list in a JSON format (for example, `[a, b, c]`) by specifying only two arguments.

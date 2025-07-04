@@ -3,7 +3,7 @@ date = '2025-07-02T13:00:53+08:00'
 draft = false
 title = 'lazy'
 tags = ['Kotlin','lazy']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 ## Kotlin 中的 `lazy`

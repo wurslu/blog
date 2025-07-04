@@ -3,7 +3,7 @@ date = '2025-06-27T20:25:44+08:00'
 draft = false
 title = 'Common Operations'
 tags = ['Kotlin','常用方法']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 只需要知道有这些操作

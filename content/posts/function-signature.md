@@ -3,7 +3,7 @@ date = '2025-06-29T15:26:20+08:00'
 draft = false
 title = 'Function Signature'
 tags = ['Kotlin','函数签名']
-categories = ['Kotlin']
+categories = ['Kotlin','Basic']
 +++
 
 ## 看一个函数签名

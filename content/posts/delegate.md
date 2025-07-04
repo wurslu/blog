@@ -2,6 +2,8 @@
 date = '2025-06-30T18:13:11+08:00'
 draft = false
 title = 'Delegate'
+tags = ['Kotlin','Delegate']
+categories = ['Kotlin','Basic']
 +++
 
 ```kotlin
