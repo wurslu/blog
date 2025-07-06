@@ -2,7 +2,7 @@
 date = '2025-06-23T19:43:54+08:00'
 draft = false
 tags = ['Kotlin','Spring Boot']
-categories = ['Kotlin','Web Wervice']
+categories = ['Kotlin','Web Service']
 title = 'Create a RESTful Web Service With a Database Using Spring Boot'
 +++
 
