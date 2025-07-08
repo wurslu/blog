@@ -11,7 +11,7 @@ categories = ['Kotlin','Basic']
 is 用于执行运行时确定对象是否符合给定类型。
 
 ```kotlin
-**if (obj is String) {
+if (obj is String) {
     print(obj.length)
 }
 
@@ -19,7 +19,7 @@ if (obj !is String) { // Same as !(obj is String)
     print("Not a String")
 } else {
     print(obj.length)
-}**﻿
+}
 ```
 
 ## smart casts
