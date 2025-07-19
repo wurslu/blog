@@ -2,6 +2,8 @@
 date = '2025-07-18T10:09:02+08:00'
 draft = false
 title = 'ViewModel Demo'
+tags = ['Kotlin','ViewModel']
+categories = ['Android']
 +++
 
 ## dependencies
